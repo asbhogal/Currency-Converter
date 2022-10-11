@@ -8,6 +8,25 @@
     width: 23.12rem;
     padding: 1.87em;
     @include cross-browser-support-box-shadow;
+    form {
+        margin: 1.5rem 0 1.25rem 0;
+        input {
+            height: 3.125rem;
+            font-size: 1.06rem;
+            padding: 0 .9375rem;
+            border: .125rem solid #999;
+            @include cross-browser-support-transition-set;
+            &:focus {
+                border: .125rem solid #1d3557;
+                @include cross-browser-support-transition-set;
+            }
+        }
+        :where(input, select, button) {
+            width: 100%;
+            outline: none;
+            border: none;
+        }
+    }
 }
 
 .attributions {

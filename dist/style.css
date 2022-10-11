@@ -23,7 +23,6 @@ header {
   font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
-  padding-bottom: 1.5rem;
 }
 
 .container {
@@ -32,6 +31,31 @@ header {
   box-shadow: 1px 12px 46px 11px rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: 1px 12px 46px 11px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 1px 12px 46px 11px rgba(0, 0, 0, 0.35);
+}
+.container form {
+  margin: 1.5rem 0 1.25rem 0;
+}
+.container form input {
+  height: 3.125rem;
+  font-size: 1.06rem;
+  padding: 0 0.9375rem;
+  border: 0.125rem solid #999;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+.container form input:focus {
+  border: 0.125rem solid #1d3557;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+.container form :where(input, select, button) {
+  width: 100%;
+  outline: none;
+  border: none;
 }
 
 .attributions {
