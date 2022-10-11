@@ -66,8 +66,24 @@ p {
   justify-content: space-between;
   padding-top: 0.9375rem;
 }
-.container form .drop-down-list span {
+.container form .drop-down-list .icon {
   transform: translateY(70%);
+}
+.container form .drop-down-list .icon span {
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  animation: counter-spin 0.3s;
+}
+.container form .drop-down-list .icon span:hover {
+  color: #457b9d;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  animation: spin 0.3s;
 }
 .container form .drop-down-list .convert-from,
 .container form .drop-down-list .convert-to {
@@ -80,17 +96,19 @@ p {
 .container form .drop-down-list .select-box {
   display: flex;
   align-items: center;
-  height: 45px;
-  width: 115px;
+  height: 2.8125rem;
+  width: 7.5rem;
   border: 0.125rem solid #999;
 }
 .container form .drop-down-list .select-box img {
   height: fit-content;
   max-width: 3.12rem;
-  padding: 0 0.125rem;
+  margin-left: 5px;
 }
 .container form .drop-down-list .select-box select {
   width: auto;
+  margin: 0 -0.3125rem 0 0.3125rem;
+  font-size: 0.875rem;
 }
 .container form .exchange-rate {
   padding: 0.9375rem 0;
@@ -122,4 +140,15 @@ p {
 
 .attributions {
   padding-top: 1.875rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes counter-spin {
+  to {
+    transform: rotate(-180deg);
+  }
 }/*# sourceMappingURL=style.css.map */

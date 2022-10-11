@@ -24,8 +24,18 @@
             align-items: center;
             justify-content: space-between;
             padding-top: .9375rem;
-            span {
+            .icon {
                 transform: translateY(70%);
+                span {
+                    cursor: pointer;
+                    @include cross-browser-support-transition-set;
+                    animation: counter-spin 0.3s;
+                    &:hover {
+                        color: #457b9d;
+                        @include cross-browser-support-transition-set;
+                        animation: spin 0.3s;
+                    }
+                }
             }
             .convert-from,
             .convert-to {
@@ -35,16 +45,18 @@
             .select-box {
                 display: flex;
                 align-items: center;
-                height: 45px;
-                width: 115px;
+                height: 2.8125rem;
+                width: 7.5rem;
                 border: .125rem solid #999;
                 img {
                     height: fit-content;
                     max-width: 3.12rem;
-                    padding: 0 .125rem;
+                    margin-left: 5px;
                 }
                 select {
                     width: auto;
+                    margin: 0 -0.3125rem 0 .3125rem;
+                    font-size: .875rem;
                 }
             }
         }
@@ -74,4 +86,16 @@
 
 .attributions {
     padding-top: 1.875rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes counter-spin {
+    to {
+        transform: rotate(-180deg);
+    }
 }
