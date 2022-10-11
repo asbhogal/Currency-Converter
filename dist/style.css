@@ -50,6 +50,23 @@ header {
   -moz-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
 }
+.container form .drop-down-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container form .drop-down-list .select-box {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  width: 115px;
+  background: red;
+}
+.container form .drop-down-list .select-box img {
+  height: fit-content;
+  width: 3.12rem;
+  padding-right: 0.125rem;
+}
 .container form input {
   height: 3.125rem;
   font-size: 1.06rem;

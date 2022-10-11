@@ -19,6 +19,23 @@
                 @include cross-browser-support-transition-set;
             }
         }
+        .drop-down-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .select-box {
+                display: flex;
+                align-items: center;
+                height: 45px;
+                width: 115px;
+                background: red;
+                img {
+                    height: fit-content;
+                    width: 3.12rem;
+                    padding-right: .125rem;
+                }
+            }
+        }
         input {
             height: 3.125rem;
             font-size: 1.06rem;
