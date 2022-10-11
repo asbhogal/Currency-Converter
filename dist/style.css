@@ -21,8 +21,18 @@ body {
 
 header {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 800;
   text-align: center;
+}
+
+.exchange-rate {
+  text-align: center;
+  font-weight: 800;
+}
+
+p {
+  padding-bottom: 0.625rem;
+  font-weight: 800;
 }
 
 .container {
@@ -54,18 +64,36 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 0.9375rem;
+}
+.container form .drop-down-list span {
+  transform: translateY(70%);
+}
+.container form .drop-down-list .convert-from,
+.container form .drop-down-list .convert-to {
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  padding: 0.125rem;
 }
 .container form .drop-down-list .select-box {
   display: flex;
   align-items: center;
   height: 45px;
   width: 115px;
-  background: red;
+  border: 0.125rem solid #999;
 }
 .container form .drop-down-list .select-box img {
   height: fit-content;
-  width: 3.12rem;
-  padding-right: 0.125rem;
+  max-width: 3.12rem;
+  padding: 0 0.125rem;
+}
+.container form .drop-down-list .select-box select {
+  width: auto;
+}
+.container form .exchange-rate {
+  padding: 0.9375rem 0;
 }
 .container form input {
   height: 3.125rem;

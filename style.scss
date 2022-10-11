@@ -23,18 +23,33 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            padding-top: .9375rem;
+            span {
+                transform: translateY(70%);
+            }
+            .convert-from,
+            .convert-to {
+                @include cross-browser-support-transition-set;
+                padding: .125rem;
+            }
             .select-box {
                 display: flex;
                 align-items: center;
                 height: 45px;
                 width: 115px;
-                background: red;
+                border: .125rem solid #999;
                 img {
                     height: fit-content;
-                    width: 3.12rem;
-                    padding-right: .125rem;
+                    max-width: 3.12rem;
+                    padding: 0 .125rem;
+                }
+                select {
+                    width: auto;
                 }
             }
+        }
+        .exchange-rate {
+            padding: .9375rem 0;
         }
         input {
             height: 3.125rem;
