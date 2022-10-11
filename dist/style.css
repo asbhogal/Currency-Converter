@@ -11,9 +11,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
 }
 
 body {
   font-family: "Inter Tight", sans-serif;
+}
+
+header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.container {
+  width: 23.12rem;
+  padding: 1.87em;
+  box-shadow: 1px 12px 46px 11px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 1px 12px 46px 11px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 1px 12px 46px 11px rgba(0, 0, 0, 0.35);
+}
+
+.attributions {
+  padding-top: 1.875rem;
 }/*# sourceMappingURL=style.css.map */

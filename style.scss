@@ -3,3 +3,13 @@
         'src/partials/responsive',
         'src/partials/typography',
         'src/partials/variables';
+
+.container {
+    width: 23.12rem;
+    padding: 1.87em;
+    @include cross-browser-support-box-shadow;
+}
+
+.attributions {
+    padding-top: 1.875rem;
+}
