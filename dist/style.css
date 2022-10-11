@@ -142,6 +142,7 @@ p {
   padding-top: 1.875rem;
 }
 
+/****** KEYFRAMES ******/
 @keyframes spin {
   to {
     transform: rotate(180deg);
