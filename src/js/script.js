@@ -34,7 +34,6 @@ for (let i = 0; i < dropDownList.length; i++) {
             }
         } else if (i == 1) {
             base_code = "GBP" 
-            defaultChoice = "defaultChoice";
         }
 
         let optionTag = `<option value="${base_code}" ${defaultChoice}>${base_code}</option>`;
