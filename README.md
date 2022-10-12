@@ -10,7 +10,7 @@ A currency converter which leverages .fetch() and the ExchangeRate-API endpoint 
 
 <strong>Features</strong>
  - Stylish, modern UI
- - Choice of 10 currencies (to and from)
+ - Choice of 161 currencies (to and from)
  - Refresh rate of once every 24hrs
  - Full responsiveness
 
