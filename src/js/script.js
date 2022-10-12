@@ -15,3 +15,18 @@ for (let i = 0; i < dropDownList.length; i++) {
         dropDownList[i].insertAdjacentHTML('beforeend', optionTag);
     }
 }
+
+fetch(`${baseCurrencySrc}`, {
+    method: "GET",
+    }).then((Response) => {
+        if(Response.ok) {
+            Response.json().then((json) => {
+                console.log(json);
+
+                let USDCode = json.rates.GBP;
+                console.log(USDCode);
+            })
+        }
+    }).catch((error) => {
+        console.log(error);
+});
