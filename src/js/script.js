@@ -19,7 +19,9 @@ fetch(`${baseCurrencySrc}`, {
 for (let i = 0; i < dropDownList.length; i++) {
     for (base_code in country_code) {
         let defaultChoice;
-        if (i == 1) {
+        if (i == 0) {
+            defaultChoice = base_code == "USD" ? "defaultChoice" : "";
+        } else if (i == 1) {
             defaultChoice = base_code == "GBP" ? "defaultChoice" : "";
         }
         let optionTag = `<option value="${base_code}" ${defaultChoice}>${base_code}</option>`;
