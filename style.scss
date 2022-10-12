@@ -57,6 +57,17 @@
                     width: auto;
                     margin: 0 -0.3125rem 0 .3125rem;
                     font-size: .875rem;
+                    &::-webkit-scrollbar {
+                        width: .5rem;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background: #f5f5f5;
+                        padding: .125rem 0;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        background: #888;
+                        border-radius: .5rem;
+                    }
                 }
             }
         }

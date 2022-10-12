@@ -110,6 +110,17 @@ p {
   margin: 0 -0.3125rem 0 0.3125rem;
   font-size: 0.875rem;
 }
+.container form .drop-down-list .select-box select::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.container form .drop-down-list .select-box select::-webkit-scrollbar-track {
+  background: #f5f5f5;
+  padding: 0.125rem 0;
+}
+.container form .drop-down-list .select-box select::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 0.5rem;
+}
 .container form .exchange-rate {
   padding: 0.9375rem 0;
 }
