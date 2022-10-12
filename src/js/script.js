@@ -19,12 +19,41 @@ fetch(`${baseCurrencySrc}`, {
 for (let i = 0; i < dropDownList.length; i++) {
     for (base_code in country_code) {
         let defaultChoice;
-        if (i == 0) {
+        
+        /*if (i == 0) {
             defaultChoice = base_code == "USD" ? "defaultChoice" : "";
         } else if (i == 1) {
             defaultChoice = base_code == "GBP" ? "defaultChoice" : "";
+        }*/
+
+        if (i == 0) {
+            if (base_code == "USD") {
+                defaultChoice = "defaultChoice";
+            } else {
+                defaultChoice = "";
+            }
+        } else if (i == 1) {
+            base_code = "GBP" 
+            defaultChoice = "defaultChoice";
         }
+
         let optionTag = `<option value="${base_code}" ${defaultChoice}>${base_code}</option>`;
         dropDownList[i].insertAdjacentHTML('beforeend', optionTag);
     }
 }
+
+/*for (base_code in country_code) {
+    let defaultChoice;
+
+    if (i == 0) {
+        if (base_code == "USD") {
+            defaultChoice = "defaultChoice"
+        } else {
+            defaultChoice = "";
+        }
+    } else if (i == 1) {
+        base_code = "GBP" {
+            defaultChoice = "defaultChoice"
+        }
+    }
+}*/
