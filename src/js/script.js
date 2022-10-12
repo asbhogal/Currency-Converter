@@ -3,15 +3,15 @@ const baseCurrencySrc = "https://open.er-api.com/v6/latest";
 
 for (let i = 0; i < dropDownList.length; i++) {
     for (base_code in country_code) {
-        let defaultChoice;
+        let selected;
         
         if (i == 0) {
-            defaultChoice = base_code == "USD" ? "defaultChoice" : "";
+            selected = base_code == "USD" ? "selected" : "";
         } else if (i == 1) {
-            defaultChoice = base_code == "GBP" ? "defaultChoice" : "";
+            selected = base_code == "GBP" ? "selected" : "";
         }
 
-        let optionTag = `<option value="${base_code}" ${defaultChoice}>${base_code}</option>`;
+        let optionTag = `<option value="${base_code}" ${selected}>${base_code}</option>`;
         dropDownList[i].insertAdjacentHTML('beforeend', optionTag);
     }
 }
