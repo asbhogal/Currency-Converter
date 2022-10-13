@@ -8,18 +8,18 @@
 
 A currency converter which leverages .fetch() and the ExchangeRate-API endpoint and allows the user to convert between two currencies which refresh every 24 hours. This repo is currently under development.
 
-<strong>Features</strong>
+<strong>:heavy_check_mark: Features</strong>
  - Stylish, modern UI
  - Choice of 161 currencies (to and from)
  - Refresh rate of once every 24hrs
  - Full responsiveness
 
-<strong>Stacks Used</strong>
+<strong>:nerd_face: Stacks Used</strong>
 <br><br>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg"><img src="https://github.com/devicons/devicon/raw/master/icons/html5/html5-original.svg" alt="html5" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg"><img src="https://github.com/devicons/devicon/raw/master/icons/css3/css3-original.svg" alt="css3" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg"><img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" alt="sass" width="50" height="50" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg"><img src="https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" height="50" style="max-width:100%;"></a>
 
-<strong>Links</strong><br>
+<strong>:link: Links</strong><br>
  - <a target="_blank" href="http://currency-converter-asbhogal.vercel.app/">Currency Converter</a>
