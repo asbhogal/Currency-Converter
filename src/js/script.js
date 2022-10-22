@@ -1,6 +1,8 @@
 const   dropDownList = document.querySelectorAll('.select-from-choice'),
-        baseCurrencySrc = "https://open.er-api.com/v6/latest",
-        getCurrencyBtn = document.getElementById("exchange-values");
+        baseCurrencySrc = `https://open.er-api.com/v6/latest`,
+        getCurrencyBtn = document.getElementById('exchange-values'),
+        fromCurrencyValue = document.querySelector('.convert-from'),
+        toCurrencyValue = document.querySelector('.convert-to');
 
 fetch(`${baseCurrencySrc}`, {
     method: "GET",
@@ -39,14 +41,26 @@ getCurrencyBtn.addEventListener("click", e => {
 
 function getExchangeRate() {
     const amount = document.getElementById('input-value');
-    let amountVal = amount.value;
+    let amountVal = amount.value,
+        urlFromCurrency = `https://open.er-api.com/v6/latest/${base_code}`;
+
+
     if ((amountVal == "") || (amountVal = "0")) {
         amountVal = 1;
         amount.value = "1"
     }
 
-
-
-
-    console.log(amountVal);
+    fetch(`${urlFromCurrency}`, {
+        method: "GET",
+        }).then((Response) => {
+            if(Response.ok) {
+                Response.json().then((json) => {
+                    let exchangeRate = json.rates[toCurrencyValue.value];
+                    console.log(exchangeRate);
+    
+                })
+            }
+        }).catch((error) => {
+            console.log(error);
+    });
 }
