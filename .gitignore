@@ -1,1 +1,9 @@
+## SCSS COMPILATION DIR SETTINGS ##
 .vscode
+
+## HARDCODED DATA ##
+country-sample-data.json
+country-list.js
+
+## NOTES ##
+old-code.js
