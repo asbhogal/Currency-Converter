@@ -34,18 +34,22 @@ fetch(`${baseCurrencySrc}`, {
         console.log(error);
 });
 
+window.addEventListener("load", () => {
+    getExchangeRate()
+});
+
 getCurrencyBtn.addEventListener("click", e => {
     e.preventDefault();
     getExchangeRate()
 });
 
 function getExchangeRate() {
-    const amount = document.getElementById('input-value');
-    let amountVal = amount.value,
-        urlFromCurrency = `https://open.er-api.com/v6/latest/${fromCurrencyValue.value}`;
+    const   amount = document.getElementById('input-value');
+    let     amountVal = amount.value,
+            urlFromCurrency = `https://open.er-api.com/v6/latest/${fromCurrencyValue.value}`;
 
 
-    if ((amountVal == "") || (amountVal = "0")) {
+    if ((amountVal == "") || (amountVal == "0")) {
         amountVal = 1;
         amount.value = "1"
     }
@@ -55,9 +59,12 @@ function getExchangeRate() {
         }).then((Response) => {
             if(Response.ok) {
                 Response.json().then((json) => {
-                    let exchangeRate = json.rates[toCurrencyValue.value];
-                    console.log(exchangeRate);
-    
+                    let     exchangeRate = json.rates[toCurrencyValue.value],
+                            totalExchangeRate = (amountVal * exchangeRate).toFixed(2);
+                    const   exchangeRateOutput = document.querySelector('.exchange-rate');
+
+                    exchangeRateOutput.innerText = "Getting exchange rate..."
+                    exchangeRateOutput.innerText = `${amountVal} ${fromCurrencyValue.value} = ${totalExchangeRate} ${toCurrencyValue.value}`;
                 })
             }
         }).catch((error) => {
