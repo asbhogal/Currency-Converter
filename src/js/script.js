@@ -36,7 +36,7 @@ fetch(`${baseCurrencySrc}`, {
                     for (base_code in country_code) {
 
                         let convertedFlagCode = (base_code.toLowerCase()).slice(0, -1);
-                        
+
                         if (base_code == element.value) {
                             let imgElement = element.parentElement.querySelector('img');
                             imgElement.src = `https://flagpedia.net/data/flags/w1160/${convertedFlagCode}.webp`;       
@@ -85,5 +85,6 @@ function getExchangeRate() {
             }
         }).catch((error) => {
             console.log(error);
+            exchangeRateOutput.innerText = "Something went wrong. Please check your internet connection and try again later.";
     });
 }
