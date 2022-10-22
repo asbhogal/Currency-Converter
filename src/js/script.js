@@ -2,7 +2,8 @@ const   dropDownList = document.querySelectorAll('.select-from-choice'),
         baseCurrencySrc = `https://open.er-api.com/v6/latest`,
         getCurrencyBtn = document.getElementById('exchange-values'),
         fromCurrencyValue = document.querySelector('.convert-from select'),
-        toCurrencyValue = document.querySelector('.convert-to select');
+        toCurrencyValue = document.querySelector('.convert-to select'),
+        switchCurrenciesIcon = document.getElementById('switch-currencies-icon');
 
 fetch(`${baseCurrencySrc}`, {
     method: "GET",
@@ -50,7 +51,7 @@ fetch(`${baseCurrencySrc}`, {
         console.log(error);
 });
 
-/*window.addEventListener("load", () => {
+/*window.addEventListener("load", () => {           // DISABLED DUE TO CORS POLICY RESTRICTION SERVER-SIDE (EXCHANGERATE API)
     getExchangeRate()
 });*/
 
@@ -58,6 +59,15 @@ getCurrencyBtn.addEventListener("click", e => {
     e.preventDefault();
     getExchangeRate()
 });
+
+switchCurrenciesIcon.addEventListener('click', () => {
+    let tempSwitchedCode = fromCurrencyValue.value;
+    fromCurrencyValue.value = toCurrencyValue.value;
+    toCurrencyValue.value = tempSwitchedCode;
+    loadFlag(fromCurrencyValue);
+    loadFlag(toCurrencyValue);
+    getExchangeRate();
+})
 
 function getExchangeRate() {
     const   amount = document.getElementById('input-value');
