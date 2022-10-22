@@ -1,8 +1,8 @@
 const   dropDownList = document.querySelectorAll('.select-from-choice'),
         baseCurrencySrc = `https://open.er-api.com/v6/latest`,
         getCurrencyBtn = document.getElementById('exchange-values'),
-        fromCurrencyValue = document.querySelector('.convert-from'),
-        toCurrencyValue = document.querySelector('.convert-to');
+        fromCurrencyValue = document.querySelector('.convert-from select'),
+        toCurrencyValue = document.querySelector('.convert-to select');
 
 fetch(`${baseCurrencySrc}`, {
     method: "GET",
@@ -42,7 +42,7 @@ getCurrencyBtn.addEventListener("click", e => {
 function getExchangeRate() {
     const amount = document.getElementById('input-value');
     let amountVal = amount.value,
-        urlFromCurrency = `https://open.er-api.com/v6/latest/${base_code}`;
+        urlFromCurrency = `https://open.er-api.com/v6/latest/${fromCurrencyValue.value}`;
 
 
     if ((amountVal == "") || (amountVal = "0")) {
