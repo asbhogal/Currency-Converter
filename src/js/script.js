@@ -25,6 +25,19 @@ fetch(`${baseCurrencySrc}`, {
                 
                         let optionTag = `<option value="${base_code}" ${selected}>${base_code}</option>`;
                         dropDownList[i].insertAdjacentHTML('beforeend', optionTag);
+
+                        dropDownList[i].addEventListener('change', e => {
+                            loadFlag(e.target);
+                        });
+                    }
+                }
+
+                function loadFlag(element) {
+                    for (base_code in country_code) {
+                        if (base_code == element.value) {
+                            let imgElement = element.parentElement.querySelector('img');
+                            imgElement.src = `https://flagpedia.net/data/flags/w1160/${base_code}.webp`;
+                        }
                     }
                 }
 
