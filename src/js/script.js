@@ -34,9 +34,9 @@ fetch(`${baseCurrencySrc}`, {
         console.log(error);
 });
 
-window.addEventListener("load", () => {
+/*window.addEventListener("load", () => {
     getExchangeRate()
-});
+});*/
 
 getCurrencyBtn.addEventListener("click", e => {
     e.preventDefault();
@@ -63,7 +63,7 @@ function getExchangeRate() {
                             totalExchangeRate = (amountVal * exchangeRate).toFixed(2);
                     const   exchangeRateOutput = document.querySelector('.exchange-rate');
 
-                    exchangeRateOutput.innerText = "Getting exchange rate..."
+                    /*exchangeRateOutput.innerText = "Getting exchange rate..."*/
                     exchangeRateOutput.innerText = `${amountVal} ${fromCurrencyValue.value} = ${totalExchangeRate} ${toCurrencyValue.value}`;
                 })
             }
