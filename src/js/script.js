@@ -34,9 +34,12 @@ fetch(`${baseCurrencySrc}`, {
 
                 function loadFlag(element) {
                     for (base_code in country_code) {
+
+                        let convertedFlagCode = (base_code.toLowerCase()).slice(0, -1);
+                        
                         if (base_code == element.value) {
                             let imgElement = element.parentElement.querySelector('img');
-                            imgElement.src = `https://flagpedia.net/data/flags/w1160/${(base_code.toLowerCase()).slice(0, -1)}.webp`;       
+                            imgElement.src = `https://flagpedia.net/data/flags/w1160/${convertedFlagCode}.webp`;       
                         }
                     }
                 }
