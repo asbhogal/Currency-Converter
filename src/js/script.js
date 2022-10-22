@@ -37,4 +37,16 @@ getCurrencyBtn.addEventListener("click", e => {
     getExchangeRate()
 });
 
-function getExchangeRate() {}
+function getExchangeRate() {
+    const amount = document.getElementById('input-value');
+    let amountVal = amount.value;
+    if ((amountVal == "") || (amountVal = "0")) {
+        amountVal = 1;
+        amount.value = "1"
+    }
+
+
+
+
+    console.log(amountVal);
+}
